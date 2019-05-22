@@ -1,0 +1,14 @@
+<div>
+  <h1>Búscador</h1>
+  <form action="">
+    <input type="text" name ="query" [attr.placeholder]="placeholderName"[(ngModel)]="query">
+    <input type="button" [value]="labelName" (click)="onClick()">
+    <p>Parámetro de búsqueda: {{query}}</p>
+    <p>{{result}}</p>
+  </form>
+  <ul>
+    <li *ngFor="let user of listUsers">
+      {{ user.id }} - {{ user.name }} - {{ user.age }} - {{ user.address }}
+    </li>
+  </ul>
+</div>
